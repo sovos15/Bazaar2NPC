@@ -246,15 +246,19 @@ Fixed := StrReplace(Fix13, Chr(95), %Blank%)
 
 ;fetches values from the data in Fixed and updates cronology with our place in the data
 Ranked := RegExMatch(Fixed, "quickstatusproductId([a-zA-Z0-9]+)sellPrice([0-9.?0-9?]+)sellVolume([0-9]+)sellMovingWeek([0-9]+)sellOrders([0-9]+)buyPrice([0-9.?0-9?]+)buyVolume([0-9]+)buyMovingWeek([0-9]+)buyOrders([0-9]+)", Value, StartingPos := Rank)
+Rank := (Ranked+=1)
 IniRead, Price, %A_ScriptDir%\Settings.ini, NPCPrices, %Value1%
 IniRead, Product, %A_ScriptDir%\Settings.ini, Aliases, %Value1%
-Rank := (Ranked+=1)
+Value2 := Round(value2, 2)
+Value6 := Round(value6, 2)
 BV := Floor(Value3/Value5)
 SV := Floor(Value7/Value9)
 DB := Floor(Value4/7)
 DS := Floor(Value8/7)
 PQ := Value6-%Value1%
 PS := Value2-%Value1%
+PQ := Round(PQ, 2)
+PS := Round(PS, 2)
 NPC := %Value1%
 
 IfGreaterOrEqual, PS, 0
@@ -284,12 +288,16 @@ Rank := (Ranked+=1)
 Ranked := RegExMatch(Fixed, "quickstatusproductId([a-zA-Z0-9]+)sellPrice([0-9.?0-9?]+)sellVolume([0-9]+)sellMovingWeek([0-9]+)sellOrders([0-9]+)buyPrice([0-9.?0-9?]+)buyVolume([0-9]+)buyMovingWeek([0-9]+)buyOrders([0-9]+)", Value, StartingPos := Rank)
 IniRead, Price, %A_ScriptDir%\Settings.ini, NPCPrices, %Value1%
 IniRead, Product, %A_ScriptDir%\Settings.ini, Aliases, %Value1%
+Value2 := Round(Value2, 2)
+Value6 := Round(Value6, 2)
 BV := Floor(Value3/Value5)
 SV := Floor(Value7/Value9)
 DB := Floor(Value4/7)
 DS := Floor(Value8/7)
 PQ := Value6-%Value1%
 PS := Value2-%Value1%
+PQ := Round(PQ, 2)
+PS := Round(PS, 2)
 NPC := %Value1%
 
 IfGreaterOrEqual, PS, 0
@@ -309,12 +317,16 @@ Rank := (Ranked+=1)
 Ranked := RegExMatch(Fixed, "quickstatusproductId([a-zA-Z0-9]+)sellPrice([0-9.?0-9?]+)sellVolume([0-9]+)sellMovingWeek([0-9]+)sellOrders([0-9]+)buyPrice([0-9.?0-9?]+)buyVolume([0-9]+)buyMovingWeek([0-9]+)buyOrders([0-9]+)", Value, StartingPos := Rank)
 IniRead, Price, %A_ScriptDir%\Settings.ini, NPCPrices, %Value1%
 IniRead, Product, %A_ScriptDir%\Settings.ini, Aliases, %Value1%
+Value2 := Round(value2, 2)
+Value6 := Round(value6, 2)
 BV := Floor(Value3/Value5)
 SV := Floor(Value7/Value9)
 DB := Floor(Value4/7)
 DS := Floor(Value8/7)
 PQ := Value6-%Value1%
 PS := Value2-%Value1%
+PQ := Round(PQ, 2)
+PS := Round(PS, 2)
 NPC := %Value1%
 
 IfGreaterOrEqual, PQ, 0
