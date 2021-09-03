@@ -3,7 +3,8 @@ Next Quick has issues at a known point
 
 
 I haven't coded any way to stop music yet 
-	not eactly a bug but its an issue, if you close and open again it stops
+	not eactly a bug but its an issue
+		it stops when you exit
 
 Values are often wrong but seem to match the API from what I can tell 
 	Check https://api.hypixel.net/skyblock/bazaar for raw data to compare
@@ -11,6 +12,6 @@ Values are often wrong but seem to match the API from what I can tell
 			I use the "quick_status" to anchor my regex matches so the prices after the last/third time an item is mentioned are the ones the tool should be useing
 
 Settings is a work in progress
-	Nothing works
-		Well the home button works and theres some data processing that works but it is a bug
-			Assume settings is buged 
+	Settings.ini edits should work
+		the home button app side works and the combo box calls the right data for the DDM half of things, thats about it.
+			Assume in tool settings page is buged
