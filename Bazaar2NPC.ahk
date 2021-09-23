@@ -93,7 +93,7 @@ Gui, Add, ListBox, x892 y289 w350 h44 , %SV%
 Gui, Add, ListBox, x892 y329 w350 h44 , %DS%
 Gui, Add, ListBox, x892 y369 w350 h44 , %BV%
 Gui, Add, ListBox, x892 y409 w350 h44 , %DB%
-Gui, Add, Text, x822 y529 w155 h44, Data from:
+Gui, Add, Text, x822 y529 w200 h44, %A_Space%Last Update:
 Gui, Add, Text, x822 y569 w430 h44, %A_MMMM%/%A_DD%/%A_YYYY%:%A_Hour%:%A_Min%:%A_Sec% 
 Gui, Show, w1270 h690, Bazaar2NPC GUI
 return
